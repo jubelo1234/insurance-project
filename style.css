@@ -13,15 +13,11 @@ font-family: 'Playfair Display', serif; */
     box-sizing: border-box;
 }
 
-body{
-    margin: 0; 
-    padding-top: 80px;
-}
 /* The Navbar */
 header {
     /* padding: 0 3em; */
     top: 0;
-    position: fixed;
+    position: sticky;
     width: 100%;
     height: 80px;
     background-color: white;
@@ -65,15 +61,16 @@ font-size: xx-large;
 /* The first About the company part */
 .sec-1{
     background-color: #161B33;
+    max-height: 700px;
 }
 
 .humanizing{
-    width: 35%;
+    width: 40%;
     padding: 2em 1em 5em 4em;
     margin-left: 55px;
     position: relative;
 }
-.humanizing hr{
+.thin-line{
     margin-top: 3em;
     width: 30%;
     border: rgba(255, 255, 255, 0.514) 0.5px solid;
@@ -81,7 +78,7 @@ font-size: xx-large;
 .humanizing h1{
     margin: 1em 0 10px 0;
     line-height: 60px;
-    font-size: 60px;
+    font-size: 70px;
     color: white;
     font-family: 'Playfair Display', serif;
 
@@ -92,6 +89,7 @@ font-size: xx-large;
     font-weight: 200;
     margin: 1.5em 0 2em 0;
     line-height: 23px;
+    /* font-size: 2px; */
     font-size: 13px;
 }
 .humanizing button{
@@ -109,6 +107,149 @@ font-size: xx-large;
 
 .family-img{
     position: absolute;
-    inset: 80px 0 0 50em;
-    width: 400px;
+    inset: 80px 0 0 55vw;
+    width: 30vw;
+    /* height: 75vh; */
+    max-height: 550px;
+    /* use clamp for the image and text */
+}
+.different {
+    margin-top: 5em;
+    padding: 110px 5em 0 110px;
+    width: 100%;
+    margin-bottom: 5em;
+}
+.different hr{
+    border: rgba(7, 7, 7, 0.514) 0.5px solid;
+    width: 18%;
+}
+.different h1{
+    margin: 1.3em 0 10px 0;
+    line-height: 60px;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+    font-family: 'Playfair Display', serif;
+}
+.container{
+    display: flex;
+    gap: 100px;
+    justify-content:space-between;
+    margin-top: 6em;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards h4{
+    font-family: 'Playfair Display', serif;
+    font-size: x-large;
+    color: blueviolet;
+    margin: 25px 0;
+}
+.cards p{
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 17px;
+    text-align: center;
+}
+.more {
+    margin-top: 14em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 100px, 50px; */
+}
+.m-container{
+    position: relative;
+    /* margin: 87em, 5em; */
+    border: black 2px solid;
+    padding: 5em, 100px;
+    width: 80%;
+    display: flex;
+    gap: 500px;
+    justify-content: space-between;
+    background-color: #161B33;
+}
+.m-container h1{
+    text-align: left;
+    width: 60%;
+    margin: 1em 0 1em 1em;
+    line-height: 60px;
+    font-size: 60px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+.m-container button{
+    position: absolute;
+    top: 40%;
+    font-size: x-large;
+    left: 70%;
+    /* right: min(10px, 0, 0); */
+    color: white;
+    border: 2px white solid;
+    background: transparent;
+    padding: 10px 25px;
+    box-shadow: 5px 2px 2px white;
+}
+.m-container button:hover{
+    transition: 0.5s;
+    color: black;
+    font-weight: 600;
+    background-color: white;
+    box-shadow: 5px 5px 5px black;
+}
+
+/* footer*/
+footer{
+    background-color: rgb(215, 243, 248);
+    margin-top: 8em;
+    padding: 4em 0;
+}
+.footer{
+    display: grid;
+    place-items: center;
+}
+.footer hr{
+    border: rgba(7, 7, 7, 0.514) 1px solid;
+    margin-bottom: 2em;
+    width: 80%;
+}
+.socials{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 2em 0 0.5em;
+    margin-bottom: 2em;
+}
+.socials h3{
+    font-family: 'Architects Daughter', cursive;
+    font-size: xx-large;
+}
+.about {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+.secs h4{
+    font-family: 'Caprasimo', cursive;
+    color: rgb(83, 83, 83);
+    font-weight: 100;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.secs p{
+    font-family: 'Architects Daughter', cursive;
+    line-height: 30px;
+}
+.secs p:hover{
+    font-weight: 800;
+}
+
+@media screen and (max-width: 640px){
+    
 }
