@@ -21,17 +21,67 @@ header {
     width: 100%;
     height: 80px;
     background-color: white;
-    z-index: 9999;
+    z-index: 999;
 }
 
+.outer{
+    position: relative;
+    width: 80%;
+    margin: 0 10%;
+    padding: 1em 0;
+}
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 7em;
-    padding: 1em 0;
 }
 
+.mobil {
+    /* visibility: hidden; */
+    background-color: white;
+    width: 100dvw;
+    position: fixed;
+    height: 100dvh;
+    /* gap: 1em; */
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+    /* justify-content: space-between; */
+    align-items: center;
+    z-index: 1000;
+}
+
+.mobil ul{
+    list-style: none;
+}
+
+.mobil ul li p {
+    font-family: 'Architects Daughter', cursive;
+    font-size:30px;
+    font-weight:200;
+    padding: 0 0 1.5em;
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+
+.ham_menu{
+    position: absolute;
+    top: 20%;
+    /* left: 80%; */
+    right: 0;
+    display: none;
+    z-index: 9999;
+    border: none;
+    background: transparent;
+
+}
+.cancel{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    z-index: 9999;
+}
 .nav h3{
 font-family: 'Architects Daughter', cursive;
 font-size: xx-large;
@@ -61,7 +111,8 @@ font-size: xx-large;
 /* The first About the company part */
 .sec-1{
     background-color: #161B33;
-    max-height: 700px;
+    height: auto;
+    /* max-height: 700px; */
 }
 
 .humanizing{
@@ -185,7 +236,7 @@ font-size: xx-large;
 .m-container button{
     position: absolute;
     top: 40%;
-    font-size: x-large;
+    font-size: 20px;
     left: 70%;
     /* right: min(10px, 0, 0); */
     color: white;
@@ -235,6 +286,7 @@ footer{
     margin-top: 2em;
 }
 .secs h4{
+    text-align: center;
     font-family: 'Caprasimo', cursive;
     color: rgb(83, 83, 83);
     font-weight: 100;
@@ -243,13 +295,175 @@ footer{
 }
 
 .secs p{
+    text-align: center;
     font-family: 'Architects Daughter', cursive;
     line-height: 30px;
 }
 .secs p:hover{
     font-weight: 800;
 }
-
+@media screen and (max-width: 1024px){
+    .nav ul{
+        display: none;
+    }
+    .ham_menu{
+        display: inline;
+    }
+    .different {
+        margin-top: 0;
+    }
+    .m-container h1{
+        width: 60%;
+        font-size: 45px;
+    }
+    .m-container button{
+        font-size: 15px;
+    }
+}
+@media  screen and (max-width: 912px) {
+    .different hr {
+        display: none;
+    }
+    .different h1{
+        margin: 0;
+        text-align: center;
+    }
+    .different {
+        padding-left: 5em;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .cards h4{
+        font-size: 38px;
+    }
+    .cards p{
+        font-size: 29px;
+        line-height: 43px;
+    }
+    .humanizing p{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 885px){
+    .humanizing hr{
+        display: none;
+    }
+    .family-img {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        inset: 0;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+    .humanizing{
+        width: 100vw;
+        padding: 3em 3em 4em 3em;
+        margin: 0;
+    }
+    .humanizing h1{
+        text-align: center;
+        margin-top: 30px;
+    }
+    .humanizing p{
+        text-align: center;
+    }
+    .humanizing button{
+        font-size: 20px;
+        display: block;
+        margin: auto;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .m-container h1{
+        width: 60%;
+        font-size: 35px;
+    }
+    .m-container button{
+        font-size: 10px;
+    }
+}
 @media screen and (max-width: 640px){
-    
+    .family-img{
+        width: 100%;
+        height: auto;
+        border-radius: 0%;
+        margin: 0;
+    }
+    .humanizing{
+        padding: 0 0 1em 0;
+    }
+    .humanizing h1{
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .humanizing p{
+        padding: 0 20px;
+    }
+    .humanizing button{
+        font-size: 10px;
+    }
+    .different{
+        padding-left:1em;
+        padding-right:1em;
+        margin-bottom: 0;
+    }
+    .different h1{
+        font-size: 45px;
+    }
+    .cards h4{
+        font-size: 30px;
+    } 
+    .cards p{
+        font-size: 25px;
+    }
+    .m-container{
+        flex-direction: column;
+        gap: 50px;
+        height: 25vh;
+    }
+    .m-container button{
+        position: absolute;
+        /* display: block; */
+        top: 70%;
+        left: 29%;
+    }
+    .m-container h1{
+        padding: 5px;
+        text-align: center;
+        width: 100%;
+        height: 70%;
+        margin: auto;
+        font-size: 28px;
+        line-height: 32px;
+        
+    }
+    .socials{
+        flex-direction: column;
+        align-items: center;
+    }
+    .socials h3{
+        padding-bottom: 10px;
+    }
+    .about{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        /* width: 100%; */
+    }
+    .secs h4{
+        margin-bottom: 5px;
+    }
+}
+@media screen and (max-width: 290px){
+    .m-container h1{
+        font-size: 20px;
+    }
+    .m-container button{
+        font-size: 13px;
+        left: 15%
+    }
 }
