@@ -13,6 +13,7 @@ font-family: 'Playfair Display', serif; */
     box-sizing: border-box;
 }
 
+
 /* The Navbar */
 header {
     /* padding: 0 3em; */
@@ -47,7 +48,7 @@ header {
     padding: min(30vh, 10rem) 2em;
     /* justify-content: space-between; */
     align-items: center;
-    z-index: 1000;
+    z-index: 990;
 }
 
 .mobil ul{
@@ -71,7 +72,7 @@ header {
     /* left: 80%; */
     right: 0;
     display: none;
-    z-index: 9999;
+    z-index: 2000;
     border: none;
     background: transparent;
 
@@ -80,7 +81,9 @@ header {
     position: absolute;
     top: 20%;
     right: 0;
-    z-index: 9999;
+    z-index: 2000;
+    border: none;
+    background: transparent;
 }
 .nav h3{
 font-family: 'Architects Daughter', cursive;
@@ -359,9 +362,9 @@ footer{
         border-radius: 50%;
     }
     .humanizing{
-        width: 100vw;
+        width: 96.6vw;
         padding: 3em 3em 4em 3em;
-        margin: 0;
+        margin-left: 0;
     }
     .humanizing h1{
         text-align: center;
